@@ -10,8 +10,9 @@
   <body>
     <div class="container">
       <div class="box1">
-          <h2>Username</h2><br/>
+          <center><h1>Username</h1><br/>
           <h2>Registration no.</h2>
+        <h3>239850</h3></center>
         <div class="box2">
             <div class="1-section">
             <h3>10+</h3>
