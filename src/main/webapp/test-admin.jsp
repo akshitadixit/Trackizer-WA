@@ -6,10 +6,10 @@
 <title>Admin test</title>
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <style> 
         body{
             margin-top: 220px;
-            background-image: url(https://miro.medium.com/max/3600/1*fE3JkGyzhWXlXApVnShDtw.gif);
             background-size: cover;
             background-attachment: local;
         }
