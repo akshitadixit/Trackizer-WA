@@ -2,9 +2,9 @@
 <html lang="en">
     <head>    
       <meta charset="UTF-8">
-      <title>Admin Panel</title>
+      <title>My Orders</title>
       <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-        <link rel="stylesheet" href="adminstyle.css" media="screen" type="text/css" />
+        <link rel="stylesheet" href="cutomstyle.css" media="screen" type="text/css" />
     </head>
     <body>
       <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -67,7 +67,7 @@
        </div>
       <div class="row quick-bar">
         <div class="col-md-2">
-            <input type="text" placeholder=""/> <div class="search-btn">Ara</div>
+            <input type="text"/> <div class="search-btn">Search</div>
         </div>
          <div class="col-md-2">
           
@@ -78,30 +78,33 @@
              <table class="table table-bordered no-more-tables">
                 <thead>
                    <tr>
-                      <th class="text-center" width="5%">REG. NO.</th>
-                      <th class="text-center" width="12%">USERNAME</th>
-                      <th class="text-center" width="8%">ORDER NO.</th>
-                      <th class="text-center" width="7%">DATE</th>
-                      <th class="text-center" width="7%">STATUS</th>
-                      <th class="text-center" width="4%">ACTIONS</th>
+                      <th class="text-center" width="5%">TIMESTAMP</th>
+                      <th class="text-center" width="12%">ORDER ID</th>
+                      <th class="text-center" width="8%">SOURCE</th>
+                      <th class="text-center" width="7%">DESTINATION</th>
+                      <th class="text-center" width="7%">BILL</th>
+                      <th class="text-center" width="4%">PAYMENT</th>
+                      <th class="text-center" width="4%">STATUS</th>
                    </tr>
                 </thead>
                 <tbody>
                    <tr>
-                      <td class="text-center">43847</td>
-                      <td class="text-center">User1</td>
-                      <td class="text-center">p48tfh84</td>
-                      <td class="text-center">01/01/2020</td>
-                      <td class="text-center">Dispatched</td>
-                      <td class="text-center">.....</td>
+                      <td class="text-center">01/01/2020 13:00:54</td>
+                      <td class="text-center">23456</td>
+                      <td class="text-center">England</td>
+                      <td class="text-center">India</td>
+                      <td class="text-center">3452</td>
+                      <td class="text-center">Done</td>
+                      <td class="text-center"><a>Track</a>></td>
                    </tr>
                    <tr>
-                    <td class="text-center">68375</td>
-                    <td class="text-center">User2</td>
-                    <td class="text-center">d8h329ryb</td>
-                    <td class="text-center">12/02/1987</td>
-                    <td class="text-center">Reached checkpt. 1</td>
-                    <td class="text-center">.....</td>
+                      <td class="text-center">12/04/2021 04:23:09</td>
+                      <td class="text-center">23456</td>
+                      <td class="text-center">Pakistan</td>
+                      <td class="text-center">Syria</td>
+                      <td class="text-center">9568</td>
+                      <td class="text-center">NA</td>
+                      <td class="text-center"><a>Make payment</a></td>
                    </tr>
                 </tbody>
              </table>
