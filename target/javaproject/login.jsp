@@ -10,7 +10,7 @@
     ResultSet rs = st.executeQuery("select * from user where username=" + "\"" + username + "\" " + "and password=" + "\"" + password + "\"" );
     if (rs.next()) {
         session.setAttribute("username", username);
-        response.sendRedirect("user-panel.jsp");
+        response.sendRedirect("userpanel.jsp");
     } else {
         out.println("Invalid password <a href='loginpage.jsp'>try again</a>");
     }
