@@ -1,12 +1,10 @@
 <%@ page import="java.sql.*"%>
 <!DOCTYPE html>
 <%  
-    String orderid = request.getParameter("orderid");
-
     Class.forName("com.mysql.cj.jdbc.Driver");
     Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/trackizer","root", "root");
     Statement st = con.createStatement();
->
+%>
 <html lang="en">
 <head>
 	<title>Tracking</title>
@@ -38,7 +36,7 @@
 					<img src="images/img-01.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" id="trackform" action="trackform.jsp">
 					<span class="login100-form-title">
 						Track Order
 					</span>
@@ -50,23 +48,33 @@
 							<i class="fa fa-link" aria-hidden="true"></i>
 						</span>
 					</div>
-
-                    <div class="wrap-input100 validate-input">
-						<% 
-						String orderid = request.getParameter("orderid");
-						int i = st.executeUpdate("select status from trackizer.track where orderid=" + "\'" + orderid + "\'");
-						%>
-						<input class="input100" type="text" name="orderid" value='<%=resultSet.getString("status")%>' readonly="readonly">
-						<span class="focus-input100"></span>
-						
-					</div>
-
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
 							Track
 						</button>
 					</div>
 				</form>
+				<% 
+					String orderid = request.getParameter("orderid");
+					String val = "";
+					if (orderid == null) {
+				%> 
+					<div class="wrap-input100" form="trackform">
+						<input class="input100" type="text" name="result" value=' ' readonly="readonly">
+						<span class="focus-input100"></span>
+					</div>
+				<%
+					}
+					else{
+						ResultSet i = st.executeQuery("select status from trackizer.track where orderid=" + "\'" + orderid + "\'");
+				%>
+					<div class="wrap-input100" form="trackform">
+						<input class="input100" type="text" name="result" value='<%=i.getString("status")%>' readonly="readonly">
+						<span class="focus-input100"></span>
+					</div>
+				<%
+					}
+				%>
 			</div>
 		</div>
 	</div>

@@ -65,8 +65,7 @@
                     %>
 
                     <div class="wrap-input100 validate-input" >
-						<label class="input100" type="text" name="bill"><%="Your bill is: \u20B9"+(ran.nextInt(5000 - 1000) + 1000) +".00"%>
-                        </label>
+						<input class="input100" type="text" name="bill" value= '<%="\u20B9"+(ran.nextInt(5000 - 1000) + 1000) +".00"%>' readonly="readonly">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-rupee" aria-hidden="true"></i>
