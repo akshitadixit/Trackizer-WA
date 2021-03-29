@@ -10,8 +10,7 @@
     else payment="DONE";
 
     Class.forName("com.mysql.cj.jdbc.Driver");
-    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/trackizer",
-            "root", "root");
+    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/trackizer","root", "root");
     Statement st = con.createStatement();
     int i = st.executeUpdate("insert into trackizer.orders(username, src, dest, bill, payment ) values ("+"\"" + username +"\""+ ","+"\""+ src + "\",\""+ dest + "\",\"" + bill + "\",\""+ payment+"\")");
     if (i > 0) {

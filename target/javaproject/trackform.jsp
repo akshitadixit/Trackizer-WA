@@ -1,7 +1,15 @@
+<%@ page import="java.sql.*"%>
 <!DOCTYPE html>
+<%  
+    String orderid = request.getParameter("orderid");
+
+    Class.forName("com.mysql.cj.jdbc.Driver");
+    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/trackizer","root", "root");
+    Statement st = con.createStatement();
+>
 <html lang="en">
 <head>
-	<title>Login</title>
+	<title>Tracking</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -22,7 +30,7 @@
 <!--===============================================================================================-->
 </head>
 <body>
-
+	
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
@@ -30,47 +38,33 @@
 					<img src="images/img-01.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form" action="login.jsp">
+				<form class="login100-form validate-form">
 					<span class="login100-form-title">
-						Member Login
+						Track Order
 					</span>
 
-					<div class="wrap-input100 validate-input" data-validate = "">
-						<input class="input100" type="text" name="username" placeholder="Username">
+					<div class="wrap-input100 validate-input" data-validate = "Valid Order ID required">
+						<input class="input100" type="text" name="orderid" placeholder="OrderID">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
-							<i class="fa fa-users" aria-hidden="true"></i>
+							<i class="fa fa-link" aria-hidden="true"></i>
 						</span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="password" placeholder="Password">
+                    <div class="wrap-input100 validate-input">
+						<% 
+						String orderid = request.getParameter("orderid");
+						int i = st.executeUpdate("select status from trackizer.track where orderid=" + "\'" + orderid + "\'");
+						%>
+						<input class="input100" type="text" name="orderid" value='<%=resultSet.getString("status")%>' readonly="readonly">
 						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-lock" aria-hidden="true"></i>
-						</span>
+						
 					</div>
-					
+
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-							Login
+							Track
 						</button>
-					</div>
-
-					<div class="text-center p-t-12">
-						<span class="txt1">
-							Forgot
-						</span>
-						<a class="txt2" href="#">
-							Username / Password?
-						</a>
-					</div>
-
-					<div class="text-center p-t-136">
-						<a class="txt2" href="regpage.jsp">
-							Create your Account
-							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-						</a>
 					</div>
 				</form>
 			</div>
