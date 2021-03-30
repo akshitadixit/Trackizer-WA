@@ -36,13 +36,14 @@
 					<img src="images/img-01.png" alt="IMG">
 				</div>
 
+
 				<form class="login100-form validate-form" id="trackform" action="trackform.jsp">
 					<span class="login100-form-title">
 						Track Order
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid Order ID required">
-						<input class="input100" type="text" name="orderid" placeholder="OrderID">
+						<input class="input100" type="text" name="id" placeholder="id">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-link" aria-hidden="true"></i>
@@ -55,9 +56,9 @@
 					</div>
 				</form>
 				<% 
-					String orderid = request.getParameter("orderid");
+					String id = request.getParameter("id");
 					String val = "";
-					if (orderid == null) {
+					if (id == null) {
 				%> 
 					<div class="wrap-input100" form="trackform">
 						<input class="input100" type="text" name="result" value=' ' readonly="readonly">
@@ -66,7 +67,7 @@
 				<%
 					}
 					else{
-						ResultSet i = st.executeQuery("select status from trackizer.track where orderid=" + "\'" + orderid + "\'");
+						ResultSet i = st.executeQuery("select status from trackizer.track where id=" + "\'" + id + "\'");
 				%>
 					<div class="wrap-input100" form="trackform">
 						<input class="input100" type="text" name="result" value='<%=i.getString("status")%>' readonly="readonly">
