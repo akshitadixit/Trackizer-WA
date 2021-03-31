@@ -57,7 +57,8 @@
                                 <tbody>
                                     <!--body of table-->
                                     <% 
-                                        String sql="select ts, orderid, src, dest, bill, payment, id, status from orders ord, track tr where username = 'abc'and ord.orderid = tr.id;"; 
+                                        String un=(String)session.getAttribute("username"); 
+                                        String sql= "select ts, orderid, src, dest, bill, payment, id, status from orders ord, track tr where username = '"+un+"' and ord.orderid = tr.id;"; 
                                         ResultSet resultSet=st.executeQuery(sql);
                                         while(resultSet.next())
                                         { 
@@ -94,8 +95,7 @@
                                     <!--last line of table-->
                                     <td colspan="3">
                                         <!--colspan for combining columns-->
-                                        <p>I can not visit new places outside my country.</p>
-                            <p> I dont have passport.</p> 
+                                        
                                     </td>
                                 </tfoot>
                             </table>

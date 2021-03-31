@@ -67,14 +67,15 @@
 				<%
 					}
 					else{
-						ResultSet i = st.executeQuery("select status from trackizer.track where id=" + "\'" + id + "\'");
+						ResultSet i = st.executeQuery("select status from trackizer.track where id='" + id + "'");
+						while(i.next()){
 				%>
 					<div class="wrap-input100" form="trackform">
 						<input class="input100" type="text" name="result" value='<%=i.getString("status")%>' readonly="readonly">
 						<span class="focus-input100"></span>
 					</div>
 				<%
-					}
+					}}
 				%>
 			</div>
 		</div>
