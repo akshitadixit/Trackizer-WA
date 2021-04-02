@@ -22,10 +22,10 @@
 		<div id="menu">
 			<ul>
 				<li class="active"><a href="#" accesskey="1" title="">Homepage</a></li>
-				<li><a href="placeorderpage.jsp" accesskey="2" title="">Place Order</a></li>
-				<li><a href="trackform.jsp" accesskey="3" title="">Track Order</a></li>
+				<li><a href="user/placeorderpage.jsp" accesskey="2" title="">Place Order</a></li>
+				<li><a href="user/trackform.jsp" accesskey="3" title="">Track Order</a></li>
 				<li><a href="about.jsp" accesskey="4" title="">About Us</a></li>
-				<li><a href="loginpage.jsp" accesskey="5" title="">Login</a></li>
+				<li><a href="user/loginpage.jsp" accesskey="5" title="">Login</a></li>
 			</ul>
 		</div>
 	</div>
@@ -35,7 +35,7 @@
 			<span class="byline">Built with Maven</span>
 		</div>
 		<ul class="actions">
-			<li><a href="loginpage.jsp" class="button">Login</a></li>
+			<li><a href="user/loginpage.jsp" class="button">Login</a></li>
 		</ul>
 	</div>
 </div>
