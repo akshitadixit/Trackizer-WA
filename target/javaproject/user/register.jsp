@@ -7,7 +7,7 @@
     Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/trackizer",
             "root", "root");
     Statement st = con.createStatement();
-    int i = st.executeUpdate("insert into trackizer.user(username, password, email) values ("+"\""+ username + "\",\"" + password+ "\",\"" + email"\")");
+    int i = st.executeUpdate("insert into trackizer.user(username, password, email) values ("+"\""+ username + "\",\"" + password+ "\",\"" + email+"\")");
     if (i > 0) {
         response.sendRedirect("loginpage.jsp");
         

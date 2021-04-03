@@ -44,36 +44,43 @@
 	<div id="three-column" class="container">
 		<div class="title">
 			<h2>Features we provide</h2>
-			<span class="byline">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue</span>
+			<span class="byline">Introducing 3 different user roles for feasibility</span>
 		</div>
 		<div class="boxA">
-			<p>Phasellus pellentesque, ante nec iaculis dapibus, eros justo auctor lectus, a lobortis lorem mauris quis nunc. Praesent pellentesque facilisis elit. Class aptent taciti sociosqu ad  torquent per conubia nostra.</p>
-			<a href="#" class="button button-alt">More Info</a>
+			<p><b>Regular User</b> can login or signup normally. They can place orders, track their couriers with the Order ID. The user panel is kept rather simple with details of all the orders placed by them.</p><br/><br/>
+			<a href="user/loginpage.jsp" class="button button-alt">Register as User</a>
 		</div>
 		<div class="boxB">
-			<p>Etiam neque. Vivamus consequat lorem at nisl. Nullam  wisi a sem semper eleifend. Donec mattis. Phasellus pellentesque, ante nec iaculis dapibus, eros justo auctor lectus, a lobortis lorem mauris quis nunc.</p>
-			<a href="#" class="button button-alt">More Info</a>
+			<p><b>Retailers</b> are usually company side men responsible for updating order status for all orders made by users under their company name. The retailers can login, but they first need to apply and need the application to be approved by the Admin.</p><br/>
+			<a href="retailer/applypage.jsp" class="button button-alt">Apply to be Retailer</a>
 		</div>
 		<div class="boxC">
-			<p> Aenean lectus lorem, imperdiet at, ultrices eget, ornare et, wisi. Pellentesque adipiscing purus. Phasellus pellentesque, ante nec iaculis dapibus, eros justo auctor lectus, a lobortis lorem mauris quis nunc.</p>
-			<a href="#" class="button button-alt">More Info</a>
+			<p><b>Admin</b> is the person controlling the entire application interface and will be pre-assigned. The Admin can view all the users, retailers and orders with their status. Admin has to accept application of someone who wishes to become a retailer. The Admin Panel is packed with lots of functionalities.</p>
+			<a href="admin/adminloginpage.jsp" class="button button-alt">Go to Admin Panel</a>
 		</div>
 	</div>
 </div>
 <div id="welcome">
 	<div class="container">
 		<div class="title">
-			<h2>Fusce ultrices fringilla metus</h2>
-			<span class="byline">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue</span>
+			<h2>About the Project</h2>
+			<span class="byline">Maven WebApp Archetype with Java Server Pages and a local MySQL database.</span>
 		</div>
-		<p>This is <strong>Assembly</strong>, a free, fully standards-compliant CSS template designed by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. The photos in this template are from <a href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so you're pretty much free to do whatever you want with it (even use it commercially) provided you give us credit for it. Have fun :) </p>
+		<p> Maven is a powerful project management tool that is based on POM (project object model). It is used for projects build, dependency and documentation. It simplifies the build process. There are many problems that we face during the project development. They are discussed below:
+			<ol style="text-align: left;" start='1'>
+				<li><b>Adding set of Jars in each project:</b> In case of struts, spring, hibernate frameworks, we need to add set of jar files in each project. It must include all the dependencies of jars also.</li>
+				<li><b>Creating the right project structure:</b> We must create the right project structure in servlet, struts etc, otherwise it will not be executed.</li>
+				<li><b>Building and Deploying the project:</b> We must have to build and deploy the project so that it may work.</li>
+			</ol><br/>
+			Maven simplifies the above mentioned problems. It makes a project easy to build and provides uniform build process (one maven project can be shared by all the maven projects). It provides project information (log document, cross referenced sources, mailing list, dependency list, unit test reports etc.)
+		</p>
 		<ul class="actions">
-			<li><a href="#" class="button">Etiam posuere</a></li>
+			<li><a href="https://akshitadixit.github.io/Trackizer-WA/project-info.html" class="button">View project docs</a></li>
 		</ul>
 	</div>
 </div>
 <div id="copyright" class="container">
-	<p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+	<p>&copy; [Semester Project] All rights reserved. | Made by <a href="https://github.com/akshitadixit">Akshita Dixit</a> and <a href="https://github.com/ayushvashist" rel="nofollow">Ayush Vashist</a>.</p>
 </div>
 </body>
 </html>

@@ -9,6 +9,7 @@
     <!DOCTYPE html>
     <html lang="en">
 <head><title>Admin Panel</title></head>
+<link rel="icon" type="image/png" href="../images/icons/user.png"/>
 <link rel="stylesheet" href="../css/admin.css">
 <link rel="stylesheet" type="text/css" href="css/util.css">
 <link rel="stylesheet" type="text/css" href="../css/main.css">

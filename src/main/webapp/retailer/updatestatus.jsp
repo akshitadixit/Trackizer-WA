@@ -11,7 +11,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="../images/icons/favicon.ico"/>
+	<link rel="icon" type="image/png" href="../images/icons/order.png"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="../template/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
@@ -46,7 +46,8 @@
 						<input class="input100" list="ids" name="id">
 						<datalist id="ids">
 							<% 
-                        String sql= "select orderid from trackizer.orders;"; 
+						String un = (String)session.getAttribute("username");
+                        String sql= "select orderid from trackizer.orders where retailer='"+un+"';"; 
                         ResultSet rs=st.executeQuery(sql);
                         while(rs.next())
                         { 
