@@ -1,3 +1,4 @@
+<%@page import="java.sql.*"%>
 <%@page import="java.util.*"%>
     <% 
     Class.forName("com.mysql.cj.jdbc.Driver"); 
@@ -78,11 +79,11 @@
 
 					<div class="wrap-input100 validate-input" data-validate = "Select retailer">
 						<input class="input100" list="retailers" name="retailer">
-						<datalist>
+						<datalist id="retailers">
 							<% 
                         String sql= "select username from retailer;"; 
                         ResultSet i=st.executeQuery(sql);
-                        while(resultSet.next())
+                        while(i.next())
                         { 
                     		%>
 							<option value='<%=i.getString("username")%>'>

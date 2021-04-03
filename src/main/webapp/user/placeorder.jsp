@@ -5,7 +5,7 @@
     String dest = request.getParameter("dest");
     String bill = request.getParameter("bill");
     String payment = request.getParameter("payment");
-    String payment = request.getParameter("retailer");
+    String retailer = request.getParameter("retailer");
 
     if (payment=="0") payment="NA";
     else payment="DONE";

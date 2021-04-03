@@ -25,7 +25,8 @@
 				<li><a href="user/placeorderpage.jsp" accesskey="2" title="">Place Order</a></li>
 				<li><a href="user/trackform.jsp" accesskey="3" title="">Track Order</a></li>
 				<li><a href="about.jsp" accesskey="4" title="">About Us</a></li>
-				<li><a href="user/loginpage.jsp" accesskey="5" title="">Login</a></li>
+				<li><a href="loginall.jsp"  accesskey="5" title="">Login</a></li>
+				
 			</ul>
 		</div>
 	</div>
@@ -35,14 +36,14 @@
 			<span class="byline">Built with Maven</span>
 		</div>
 		<ul class="actions">
-			<li><a href="user/loginpage.jsp" class="button">Login</a></li>
+			<li><a href="loginall.jsp" class="button">Login</a></li>
 		</ul>
 	</div>
 </div>
 <div id="wrapper">
 	<div id="three-column" class="container">
 		<div class="title">
-			<h2>Feugiat lorem ipsum dolor sed veroeros</h2>
+			<h2>Features we provide</h2>
 			<span class="byline">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue</span>
 		</div>
 		<div class="boxA">

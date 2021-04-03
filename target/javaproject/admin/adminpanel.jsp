@@ -35,7 +35,7 @@
            </a>
          </li>
          <li>
-           <a href="#">
+           <a href="#tasks">
              <i class="fa fa-check-square-o"></i>
              Tasks
            </a>
@@ -74,7 +74,7 @@
      </nav>
      <div class="tab-target targeted" id="knowledge">
        <div style="overflow-x:visible;">
-            <table id="customers">
+            <table class="customtable">
                 <thead>
                     <!--heading -->
                     <tr>
@@ -135,7 +135,7 @@
      </div>
      <div class="tab-target" id="activity">
       <div style="overflow-x:visible;">
-        <table id="customers">
+        <table class="customtable">
             <thead>
                 <!--heading -->
                 <tr>
@@ -152,8 +152,8 @@
             <tbody>
                 <!--body of table-->
                 <% 
-                    String sql= "select regno, username, password, email from retailer;"; 
-                    ResultSet resultSet=st.executeQuery(sql);
+                    sql= "select regno, username, password, email from retailer;"; 
+                    resultSet=st.executeQuery(sql);
                     while(resultSet.next())
                     { 
                 %>
@@ -196,7 +196,7 @@
      </div>
      <div class="tab-target" id="friends">
         <div style="overflow-x:visible;">
-            <table id="orders">
+            <table class="customtable">
                 <thead>
                     <!--heading -->
                     <tr>
@@ -265,23 +265,6 @@
             </table>
         </div>
      </div>
-    </section>
-
-    <section id="tasks">
-        <div id="myDIV" class="header">
-            <h2>My To Do List</h2>
-            <input type="text" id="myInput" placeholder="Title...">
-            <span onclick="newElement()" class="addBtn">Add</span>
-          </div>
-          
-          <ul id="myUL">
-            <li>Hit the gym</li>
-            <li class="checked">Pay bills</li>
-            <li>Meet George</li>
-            <li>Buy eggs</li>
-            <li>Read a book</li>
-            <li>Organize office</li>
-          </ul>
     </section>
 
    <footer></footer>

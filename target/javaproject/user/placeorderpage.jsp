@@ -1,4 +1,9 @@
+<%@page import="java.sql.*"%>
 <%@page import="java.util.*"%>
+    <% 
+    Class.forName("com.mysql.cj.jdbc.Driver"); 
+    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/trackizer", "root" , "root" ); Statement st=con.createStatement(); 
+    %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,10 +78,20 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Select retailer">
-						<input class="input100" type="dropdown"/ name="id" placeholder="id">
+						<input class="input100" list="retailers" name="retailer">
+						<datalist id="retailers">
+							<% 
+                        String sql= "select username from retailer;"; 
+                        ResultSet i=st.executeQuery(sql);
+                        while(i.next())
+                        { 
+                    		%>
+							<option value='<%=i.getString("username")%>'>
+							<% } %>
+						</datalist>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
-							<i class="fa fa-shoppingcart" aria-hidden="true"></i>
+							<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 						</span>
 					</div>
 

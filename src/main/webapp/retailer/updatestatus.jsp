@@ -37,13 +37,23 @@
 				</div>
 
 
-				<form class="login100-form validate-form" id="trackform" action="trackform.jsp">
+				<form class="login100-form validate-form" id="trackform" action="updatestatus.jsp">
 					<span class="login100-form-title">
 						Update Order Status
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid Order ID required">
-						<input class="input100" type="text" name="id" placeholder="Order ID">
+						<input class="input100" list="ids" name="id">
+						<datalist id="ids">
+							<% 
+                        String sql= "select orderid from trackizer.orders;"; 
+                        ResultSet rs=st.executeQuery(sql);
+                        while(rs.next())
+                        { 
+                    		%>
+							<option value='<%=rs.getString("orderid")%>'>
+							<% } %>
+						</datalist>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-link" aria-hidden="true"></i>
@@ -68,7 +78,7 @@
 					String id = request.getParameter("id");
 					String status = request.getParameter("status");
 					String val = "";
-					if (id == null) {
+					if (id == null && status == null){
 				%> 
 					<div class="wrap-input100" form="trackform">
 						<input class="input100" type="text" name="result" value=' ' readonly="readonly">
@@ -77,16 +87,14 @@
 				<%
 					}
 					else{
-						ResultSet i = st.executeQuery("select status from trackizer.track where id='" + id + "'");
-						while(i.next()){
+						String sequel = "update trackizer.track set status='"+ status+"' where id='"+ id +"'";
+ 						int i = st.executeUpdate(sequel);
 				%>
 					<div class="wrap-input100" form="trackform">
-						<input class="input100" type="text" name="result" value='<%=i.getString("status")%>' readonly="readonly">
+						<input class="input100" type="text" name="result" value='Status Updated!!' readonly="readonly">
 						<span class="focus-input100"></span>
 					</div>
-				<%
-					}}
-				%>
+				<%   } %>
 			</div>
 		</div>
 	</div>

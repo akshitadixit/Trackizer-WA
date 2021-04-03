@@ -9,7 +9,7 @@
         <html lang="en">
 
         <head>
-            <title>User Panel</title>
+            <title>Retailer Panel</title>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <!--===============================================================================================-->
@@ -93,13 +93,12 @@
                                 </tbody>
                                 <tfoot>
                                     <!--last line of table-->
-                                    <td colspan="3">
-                                        <!--colspan for combining columns-->
-                                        
-                                    </td>
                                 </tfoot>
                             </table>
                         </div>
+                        <button class="login100-form-btn">
+                            <a href="updatestatus.jsp" >Update status of orders
+                        </button></a>
                     </div>
                 </div>
             </div>
