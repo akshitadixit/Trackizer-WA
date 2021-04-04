@@ -239,11 +239,19 @@ body {
   bottom:14px;
 }
 
-#content {
+#content{
+  padding:150px 50px 50px 350px;
+}
+
+#functions {
   padding:150px 50px 50px 350px;
 }
 
 #content p {
+  padding:0;
+  margin:0 0 20px 0;
+}
+#functions p {
   padding:0;
   margin:0 0 20px 0;
 }
@@ -324,6 +332,23 @@ body {
   text-transform:uppercase;
   color:#748495;
 }
+#tabs1 ul {
+  list-style-type:none;
+  width:calc(100% + 100px);
+  height:65px;
+  background:white;
+  padding:0;
+  margin:0 0 50px -50px;
+}
+
+#tabs1 li {
+  float:left;
+  line-height:65px;
+  margin:0 30px 0 0;
+  cursor:pointer;
+  text-transform:uppercase;
+  color:#748495;
+}
 
 #tabs li:first-of-type {
   margin:0 30px 0 50px;
@@ -334,6 +359,18 @@ body {
 }
 
 #tabs li.active {
+  box-shadow:inset 0 -5px 0 #ef8700;
+  color:#2f3e4d;
+}
+#tabs1 li:first-of-type {
+  margin:0 30px 0 50px;
+}
+
+#tabs1 li:hover {
+  color:#2f3e4d;
+}
+
+#tabs1 li.active {
   box-shadow:inset 0 -5px 0 #ef8700;
   color:#2f3e4d;
 }
@@ -379,7 +416,14 @@ body {
     position:relative;
     left:0;
   }
+  #functions {
+    position:relative;
+    left:0;
+  }
   .open-menu #content {
+    left:300px;
+  }
+  .open-menu #functions {
     left:300px;
   }
   #sidenav {
@@ -405,6 +449,9 @@ body {
     color:#0f92d1;
   }
   #content {
+    padding:130px 30px 30px 30px;
+  }
+  #functions {
     padding:130px 30px 30px 30px;
   }
   #main-nav {
@@ -437,6 +484,18 @@ body {
   }
 
   #tabs li:first-of-type {
+    margin:0 30px 0 30px;
+  }
+
+  #tabs1 ul {
+    width:calc(100% + 60px);
+    margin:0 0 30px -30px;
+  }
+  #tabs1 li {
+    margin:0 30px 0 0;
+  }
+
+  #tabs1 li:first-of-type {
     margin:0 30px 0 30px;
   }
   .tab-target {
@@ -478,4 +537,26 @@ text-align:center;
 span{
 font-size: 200%;
 line-height: 80%;
+}
+
+.myButton {
+  background-color:#44c767;
+  border-radius:28px;
+  border:1px solid #18ab29;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:17px;
+  padding:16px 31px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #4c8a42;
+}
+.myButton:hover {
+  background-color:#393b38;
+  color:#18ab29;
+}
+.myButton:active {
+  position:relative;
+  top:1px;
 }

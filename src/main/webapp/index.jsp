@@ -24,7 +24,7 @@
 				<li class="active"><a href="#" accesskey="1" title="">Homepage</a></li>
 				<li><a href="user/placeorderpage.jsp" accesskey="2" title="">Place Order</a></li>
 				<li><a href="user/trackform.jsp" accesskey="3" title="">Track Order</a></li>
-				<li><a href="about.jsp" accesskey="4" title="">About Us</a></li>
+				<li><a href="assets/Project Report.pdf" accesskey="4" title="">About Us</a></li>
 				<li><a href="loginall.jsp"  accesskey="5" title="">Login</a></li>
 				
 			</ul>

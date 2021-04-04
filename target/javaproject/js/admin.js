@@ -17,6 +17,14 @@ $('#tabs li').click(function(){
   $(this).addClass('active')
 });
 
+$('#tabs1 li').click(function(){
+  var clickTarget = $(this).attr('data-target');
+  $('.tab-target').removeClass('targeted');
+  $('#'+clickTarget).addClass("targeted");
+  $('#tabs1 li').removeClass('active');
+  $(this).addClass('active')
+});
+
 
 $('#admin-search input').on('focus',function(){
   $('#header_logo').addClass('hidden');
