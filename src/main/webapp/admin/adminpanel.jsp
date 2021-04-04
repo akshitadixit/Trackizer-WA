@@ -42,9 +42,9 @@
            </a>
          </li>
          <li>
-           <a href="#">
+           <a href="approveretailer.jsp">
              <i class="fa fa-life-ring"></i>
-             Tasks
+             Approve Retailers
            </a>
          </li>
          <li>
@@ -82,7 +82,6 @@
                         <th>USERNAME</th>
                         <th>PASSWORD</th>
                         <th>E-MAIL</th>
-                        <th>ORDERS</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -106,15 +105,6 @@
                         <td>
                           <%=resultSet.getString("email") %>
                       </td>
-                        <!---
-                            sql = "select count(username) from orders where orders.username='"+un+"';";
-                            ResultSet rs=st.executeQuery(sql);
-                            while(rs.next())
-                            {
-                        --->
-                        <td>
-                            8
-                        </td>
                     </tr>
                 <% 
                     }
@@ -143,7 +133,6 @@
                     <th>USERNAME</th>
                     <th>PASSWORD</th>
                     <th>E-MAIL</th>
-                    <th>ORDERS</th>
                 </tr>
             </thead>
             <tbody>
@@ -166,15 +155,6 @@
                     </td>
                     <td>
                       <%=resultSet.getString("email") %>
-                  </td>
-                    <!---
-                        sql = "select count(username) from orders where orders.username='"+un+"';";
-                        ResultSet rs=st.executeQuery(sql);
-                        while(rs.next())
-                        {
-                    --->
-                    <td>
-                        8
                     </td>
                 </tr>
             <% 
@@ -311,8 +291,6 @@
                     </td>
                 </tfoot>
             </table>
-            <center><button class="myButton"><a href="approveretailer.jsp"> </a>Approve Retailers</a></button></center>
-            
         </div>
     </div>
     <div class="tab-target" id="accs">
@@ -327,7 +305,7 @@
                 </thead>
                 <tbody>
                     <!--body of table-->
-                    <% 
+                    <%
                         sql= "select retailer, sum(bill) from orders group by retailer;";
                         resultSet=st.executeQuery(sql);
                         while(resultSet.next())
@@ -382,5 +360,6 @@
    <footer></footer>
    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
    <script src="../js/admin.js"></script>
+   <script src="../js/main.js"></script>
    </body>
    </html>

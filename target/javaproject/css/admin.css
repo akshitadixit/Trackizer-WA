@@ -539,24 +539,26 @@ font-size: 200%;
 line-height: 80%;
 }
 
-.myButton {
-  background-color:#44c767;
-  border-radius:28px;
-  border:1px solid #18ab29;
-  display:inline-block;
-  cursor:pointer;
-  color:#ffffff;
-  font-family:Arial;
-  font-size:17px;
-  padding:16px 31px;
-  text-decoration:none;
-  text-shadow:0px 1px 0px #4c8a42;
-}
-.myButton:hover {
-  background-color:#393b38;
-  color:#18ab29;
-}
-.myButton:active {
-  position:relative;
-  top:1px;
-}
+#myButton {
+	background-color:#44c767;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #4c8a42;
+  }
+  #myButton:hover {
+	background-color:#393b38;
+	color:#18ab29;
+  }
+  #myButton:active {
+	position:relative;
+	top:1px;
+  }
+
+
