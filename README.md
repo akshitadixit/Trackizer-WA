@@ -1,7 +1,10 @@
 # Trackizer
 
-Semester Project: Java Project with Maven webapp archetype. Runs on Tomcat server. 
+Semester Project: Java Project with Maven webapp archetype. Runs on Tomcat server. Uses MySQL for database.
 
 ### Screenshots (recent):
-<img src="https://github.com/akshitadixit/Trackizer-WA/blob/master/assets/home.PNG" height=500 width=400>         <img src="https://github.com/akshitadixit/Trackizer-WA/blob/master/assets/userpanel.PNG" height=500 width=400><br/>
-<img src="https://github.com/akshitadixit/Trackizer-WA/blob/master/assets/adminpanel.PNG" height=600 width=1000>
+![home](assets/home1.PNG) <br/>
+![homeagain](assets/home2.PNG) <br/>
+![admin](assets/admin-panel.PNG) <br/>
+![user](assets/user-signup.PNG) <br/>
+![retailer](assets/retailer-panel.PNG)
