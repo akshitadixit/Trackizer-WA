@@ -13,7 +13,7 @@
     Class.forName("com.mysql.cj.jdbc.Driver");
     Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/trackizer","root", "root");
     Statement st = con.createStatement();
-    int i = st.executeUpdate("insert into trackizer.orders(username, src, dest, bill, payment, retailer ) values ("+"\"" + username +"\""+ ","+"\""+ src + "\",\""+ dest + "\",\"" + bill + "\",\""+ payment+ "\",\""+ retailer+"\")");
+    int i = st.executeUpdate("insert into trackizer.orders(username, src, dest, bill, payment, retailer) values ("+"\"" + username +"\""+ ","+"\""+ src + "\",\""+ dest + "\",\"" + bill + "\",\""+ payment+ "\",\""+ retailer+"\")");
     if (i > 0) {
         response.sendRedirect("userpanel.jsp");
         

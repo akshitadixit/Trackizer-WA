@@ -63,7 +63,7 @@
                                         while(resultSet.next())
                                         { 
                                     %>
-                                    <tr>
+                                    <tr> 
                                         <td>
                                             <%=resultSet.getString("ts") %>
                                         </td>
